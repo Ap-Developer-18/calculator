@@ -23,7 +23,7 @@ class Calculator {
     )
       return;
     this.currentOperandTextElement.innerText =
-      this.currentOperandTextElement.innerText + number;
+      this.currentOperandTextElement.innerText.toString() + number.toString();
   }
 
   selectOperation(operation) {
@@ -62,8 +62,6 @@ class Calculator {
 
     this.currentOperandTextElement.innerText = finalResult.toLocaleString();
     this.previousOperandTextElement.innerText = "";
-    console.log("this is previous value", previousValue);
-    console.log("this is current value", finalResult);
   }
 }
 
